@@ -2,33 +2,24 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ {{>headerlinks}}
+ <title>Weather Update</title>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="shortcut icon" href="images/iconfinder_cloudy_2995001.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous" />
-
-  <title>Weather</title>
 </head>
 <body>
   {{>navbar}}
 
   
-  <div class="container-fluid main_header">
+  <div class="main_header">
     <div class="row">
       <div class="col-md-10 col-12 mx-auto">
-          <div class="main_content">
+
+          <div class="container-fluid main_content">
             <form class="temp_form">
               <input type="text" id="cityName" placeholder="Enter your city name" autocomplete="false">
+              <br>
               <input type="submit" id="submitBtn" value="Search">
             </form>
-           </div>
 
           <div class="tempInformation">
             <div class="top_layer">
@@ -39,10 +30,10 @@
               <p id="city_name">Get Output Here</p>
               <div class="middle_layer daa_hide">
                 <p id="temp"><span>0</span><sup>o</sup>C</p>
-                <p id="temp_status"></p>
+                <p id="temp_status"><i class="fa fa-cloud" aria-hidden="true"></i></p>
               </div>
             </div>
-
+          </div>
           </div>
       </div>
     </div>
